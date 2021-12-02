@@ -19,13 +19,12 @@ describe('SampleERC721', function () {
   it('can mint', async function () {
     const {users, SampleERC721} = await setup();
 
-    await expect(
-      users[0].SampleERC721.mint(
+    await expect(users[0].SampleERC721.mint(users[0].address, 1))
+      .to.emit(SampleERC721, 'Transfer')
+      .withArgs(
+        '0x0000000000000000000000000000000000000000',
         users[0].address,
         1
-      )
-    )
-      .to.emit(SampleERC721, 'Transfer')
-      .withArgs("0x0000000000000000000000000000000000000000", users[0].address, 1);
+      );
   });
 });
