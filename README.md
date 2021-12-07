@@ -1,4 +1,6 @@
-# Boilerplate for ethereum solidity smart contract development
+# Boilerplate for ethereum solidity smart contract development. 
+
+Based in https://github.com/wighawag/template-ethereum-contracts
 
 ## INSTALL
 
