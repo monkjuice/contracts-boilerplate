@@ -15,7 +15,7 @@ if (process.env.HARDHAT_FORK) {
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: '0.8.3',
+    version: '0.8.4',
   },
   namedAccounts: {
     deployer: 0,

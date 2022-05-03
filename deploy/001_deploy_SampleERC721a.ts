@@ -1,21 +1,18 @@
 import {HardhatRuntimeEnvironment} from 'hardhat/types';
 import {DeployFunction} from 'hardhat-deploy/types';
-import {SampleERC721} from '../typechain/SampleERC721';
 // import {parseEther} from 'ethers/lib/utils';
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
-  const {deployments, getNamedAccounts, ethers} = hre;
+  const {deployments, getNamedAccounts} = hre;
   const {deploy} = deployments;
 
   const {deployer} = await getNamedAccounts();
 
-  await deploy('SampleERC721', {
+  await deploy('SampleERC721a', {
     from: deployer,
     log: true,
+    args: ['Sample Name', 'SN'],
   });
-
-  const erc721: SampleERC721 = await ethers.getContract('SampleERC721');
-  erc721.initialize('Sample', 'SML');
 };
 export default func;
-func.tags = ['SampleERC721'];
+func.tags = ['SampleERC721a'];
