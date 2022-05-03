@@ -1,4 +1,4 @@
-# Boilerplate for ethereum solidity smart contract development. 
+# Boilerplate for ethereum solidity smart contract development.
 
 Based in https://github.com/wighawag/template-ethereum-contracts
 
@@ -78,6 +78,15 @@ This will deploy the contract on the specified network.
 Behind the scene it uses `hardhat deploy` command so you can append any argument for it
 <br/><br/>
 
+`yarn verify --network <network> [args...]`
+
+This will verify the contract on the specified network.
+
+Behind the scene it uses `hardhat verify` plugin so you can append any argument for it.
+
+More info: https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html
+<br/><br/>
+
 `yarn export <network> <file.json>`
 
 This will export the abi+address of deployed contract to `<file.json>`
@@ -107,5 +116,5 @@ This will test the contract against a temporary fork of the specified network.
 This will deploy the contract against a fork of the specified network and it will keep running as a node.
 
 Behind the scene it uses `hardhat node` command so you can append any argument for it
-"# contracts-boilerplate" 
-"# contracts-boilerplate" 
+"# contracts-boilerplate"
+"# contracts-boilerplate"
