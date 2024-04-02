@@ -52,17 +52,13 @@ const config: HardhatUserConfig = {
       url: node_url('mainnet'),
       accounts: accounts('mainnet'),
     },
-    rinkeby: {
-      url: node_url('rinkeby'),
-      accounts: accounts('rinkeby'),
-    },
     kovan: {
       url: node_url('kovan'),
       accounts: accounts('kovan'),
     },
-    goerli: {
-      url: node_url('goerli'),
-      accounts: accounts('goerli'),
+    sepolia: {
+      url: node_url('sepolia'),
+      accounts: accounts('sepolia'),
     },
   },
   paths: {
